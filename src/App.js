@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react'
+import Editor from './Editor'
+import Preview from './Preview'
+import Toolbar from './Toolbar'
+import { Placeholder } from './Placeholder'
+import './App.scss'
 
 function App() {
+  const [content, setContent] = useState(Placeholder)
+  const handleChange = (e) => {
+    setContent(e.target.value)
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <Toolbar id='header' className='header' icon={'icon'} text='Markdown Previewer' />
+      <div className='container'>
+        <div className='editor-wrapper'>
+          <Toolbar className='toolbar' icon={'icon'} text='Editor' />
+          <Editor content={content} onChange={handleChange} />
+        </div>
+        <div className='preview-wrapper'>
+          <Toolbar className='toolbar' icon={'icon'} text='Previewer' />
+          <Preview content={content} />
+        </div>
+      </div>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
