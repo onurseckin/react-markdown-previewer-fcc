@@ -1,8 +1,8 @@
 # React Projects - Build a Markdown Previewer
 
-## URL
+## https://onurseckin.github.io/react-markdown-previewer-fcc/
 
-# Picture
+<img width="1422" alt="screenshot" src="https://user-images.githubusercontent.com/24792165/103127530-ff4fb180-4646-11eb-8848-4201ee565ff2.png">
 
 ### User Story #1: I can see a textarea element with a corresponding id="editor".
 
