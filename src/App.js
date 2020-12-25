@@ -12,14 +12,14 @@ function App() {
   }
   return (
     <div className='App'>
-      <Toolbar id='header' className='header' icon={'icon'} text='Markdown Previewer' />
+      <Toolbar id='header' className='header' text='Markdown Previewer' />
       <div className='container'>
         <div className='editor-wrapper'>
-          <Toolbar className='toolbar' icon={'icon'} text='Editor' />
+          <Toolbar className='toolbar' text='Editor' />
           <Editor content={content} onChange={handleChange} />
         </div>
         <div className='preview-wrapper'>
-          <Toolbar className='toolbar' icon={'icon'} text='Previewer' />
+          <Toolbar className='toolbar' text='Previewer' />
           <Preview content={content} />
         </div>
       </div>
